@@ -1,0 +1,26 @@
+{
+  "seed": 20261005,
+  "counts": {
+    "kb_a": 60,
+    "kb_b": 40,
+    "kb_c": 20
+  },
+  "version": "0.1.0",
+  "generator": {
+    "kb_a": {
+      "per_domain": 15
+    },
+    "kb_b": {
+      "n_real": 20,
+      "n_fictional": 20
+    },
+    "kb_c": {
+      "n_total": 20,
+      "n_fictional": 6,
+      "n_hard": 6,
+      "n_medium": 5,
+      "n_easy": 3
+    }
+  },
+  "timestamp": "2026-10-05 12:01:53"
+}

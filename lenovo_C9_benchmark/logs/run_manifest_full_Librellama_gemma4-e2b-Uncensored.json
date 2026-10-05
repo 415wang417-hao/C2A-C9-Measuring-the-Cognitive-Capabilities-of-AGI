@@ -1,0 +1,73 @@
+{
+  "generated": "2026-10-05T12:26:30",
+  "tag": "full",
+  "items_per_family": {
+    "kb_a": 60,
+    "kb_b": 40,
+    "kb_c": 20
+  },
+  "item_files": {
+    "kb_a": {
+      "file": "C:\\Users\\lenovo\\Desktop\\lenovo_C2A-C9_交付物\\lenovo_C9_benchmark\\data\\kb_a.jsonl",
+      "sha256": "fd0f27761a5037beb8dd6c707b6645892c9530c8b14943c74855b67a819f4eb1"
+    },
+    "kb_b": {
+      "file": "C:\\Users\\lenovo\\Desktop\\lenovo_C2A-C9_交付物\\lenovo_C9_benchmark\\data\\kb_b.jsonl",
+      "sha256": "b47fff679bb238caa95215c3c60772f1f9e16e114e4e77f0cffbdbac373fc05c"
+    },
+    "kb_c": {
+      "file": "C:\\Users\\lenovo\\Desktop\\lenovo_C2A-C9_交付物\\lenovo_C9_benchmark\\data\\kb_c.jsonl",
+      "sha256": "758ce07ebb422deb1680184b8c88f2bb327dd173db3b7c52c2af1a7c212ac006"
+    }
+  },
+  "logs": {
+    "kb_a": {
+      "transcript": "transcript_full_kb_a_Librellama_gemma4-e2b-Uncensored.jsonl",
+      "scored": "scored_full_kb_a_Librellama_gemma4-e2b-Uncensored.jsonl",
+      "calls": 120,
+      "items": 60
+    },
+    "kb_b": {
+      "transcript": "transcript_full_kb_b_Librellama_gemma4-e2b-Uncensored.jsonl",
+      "scored": "scored_full_kb_b_Librellama_gemma4-e2b-Uncensored.jsonl",
+      "calls": 40,
+      "items": 40
+    },
+    "kb_c": {
+      "transcript": "transcript_full_kb_c_Librellama_gemma4-e2b-Uncensored.jsonl",
+      "scored": "scored_full_kb_c_Librellama_gemma4-e2b-Uncensored.jsonl",
+      "calls": 20,
+      "items": 20
+    }
+  },
+  "decoding": {
+    "seed": 20261005,
+    "temperature": 0.0,
+    "num_predict": 256,
+    "think": false,
+    "timeout_sec": 180,
+    "api": "auto"
+  },
+  "runtime": {
+    "endpoint": "http://127.0.0.1:11434",
+    "ollama_version": "0.35.1",
+    "model": "Librellama/gemma4:e2b-Uncensored",
+    "digest": null,
+    "quantization_level": "Q4_K_M",
+    "parameter_size": "4.6B",
+    "family": "gemma4",
+    "format": "gguf",
+    "template_present": true,
+    "model_info_subset": {
+      "gemma4.attention.head_count": 8,
+      "gemma4.attention.head_count_kv": 1,
+      "gemma4.block_count": 35,
+      "gemma4.context_length": 131072,
+      "gemma4.embedding_length": 1536,
+      "gemma4.embedding_length_per_layer_input": 256,
+      "general.parameter_count": 4647450147
+    },
+    "server_probe_ok": true,
+    "show_probe_error": null
+  }
+}

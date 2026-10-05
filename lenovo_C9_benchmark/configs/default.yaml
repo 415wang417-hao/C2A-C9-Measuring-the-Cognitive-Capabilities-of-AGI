@@ -1,0 +1,46 @@
+# KnowBound benchmark configuration (C9 / Track 2 Metacognition)
+# Paths are resolved relative to the project root (the folder that contains
+# this `configs/` directory), NOT relative to the current working directory.
+
+seed: 20261005
+
+paths:
+  data: data        # generated item files (*.jsonl)
+  logs: logs        # per-item model transcripts (*.jsonl, checkpoint/resume)
+  results: results  # metrics.json + summary.md + smoke_report.md
+
+generator:
+  kb_a:                 # pre-answer confidence prediction
+    per_domain: 15      # 15 per domain x 4 domains = 60 items
+  kb_b:                 # knowledge-boundary detection
+    n_real: 20          # answerable items
+    n_fictional: 20     # matched unanswerable items (same templates)
+  kb_c:                 # strategic help-seeking (single 20-item sitting)
+    n_total: 20
+    n_fictional: 6      # unanswerable
+    n_hard: 6
+    n_medium: 5
+    n_easy: 3
+
+model:
+  name: gemma4:e4b                  # primary (7.5B, Q4_K_M per `ollama list`)
+  endpoint: http://127.0.0.1:11434
+  api: auto                         # auto | chat
+  temperature: 0.0                  # deterministic decoding
+  num_predict: 256
+  timeout_sec: 180
+  think: false                      # disable reasoning trace when supported
+  seed: 20261005
+
+budget:
+  kb_c_help_budget: 6               # help tokens available across the sitting
+  kb_c_help_discount: 0.7           # score multiplier for a helped item
+
+smoke:
+  per_family: 3                     # 3 items per family for the smoke test
+
+# Optional secondary model for the model-pair control (not used by default,
+# the full run may enable it to compute first-order-ability-matched strata).
+secondary_model:
+  enabled: false
+  name: Librellama/gemma4:e2b-Uncensored

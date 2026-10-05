@@ -1,0 +1,1476 @@
+{
+  "generated": "2026-10-05T13:20:47",
+  "tag": "full",
+  "bootstrap": {
+    "n_boot": 2000,
+    "seed": 20261005,
+    "alpha": 0.05,
+    "unit": "item",
+    "note": "percentile bootstrap over items; paired resampling for model-vs-model"
+  },
+  "models": {
+    "gemma4:e4b": {
+      "slug": "gemma4-e4b",
+      "paths": {
+        "kb_a": "logs\\scored_full_kb_a_gemma4-e4b.jsonl",
+        "kb_b": "logs\\scored_full_kb_b_gemma4-e4b.jsonl",
+        "kb_c": "logs\\scored_full_kb_c_gemma4-e4b.jsonl"
+      },
+      "items": {
+        "kb_a": 60,
+        "kb_b": 40,
+        "kb_c": 20
+      },
+      "metrics": {
+        "kb_a": {
+          "n": 60,
+          "accuracy": 0.7,
+          "delta_e": 0.0558,
+          "abs_delta_e": 0.5358,
+          "brier": 0.5218,
+          "ece10": 0.5325,
+          "auroc2": 0.3869,
+          "reliability_bins": [
+            {
+              "bin": "[0.0,0.1)",
+              "n": 12,
+              "avg_confidence": 0.0,
+              "accuracy": 1.0,
+              "gap": 1.0
+            },
+            {
+              "bin": "[0.1,0.2)",
+              "n": 1,
+              "avg_confidence": 0.1,
+              "accuracy": 1.0,
+              "gap": 0.9
+            },
+            {
+              "bin": "[0.2,0.3)",
+              "n": 0,
+              "avg_confidence": null,
+              "accuracy": null,
+              "gap": null
+            },
+            {
+              "bin": "[0.3,0.4)",
+              "n": 2,
+              "avg_confidence": 0.3,
+              "accuracy": 1.0,
+              "gap": 0.7
+            },
+            {
+              "bin": "[0.4,0.5)",
+              "n": 0,
+              "avg_confidence": null,
+              "accuracy": null,
+              "gap": null
+            },
+            {
+              "bin": "[0.5,0.6)",
+              "n": 0,
+              "avg_confidence": null,
+              "accuracy": null,
+              "gap": null
+            },
+            {
+              "bin": "[0.6,0.7)",
+              "n": 0,
+              "avg_confidence": null,
+              "accuracy": null,
+              "gap": null
+            },
+            {
+              "bin": "[0.7,0.8)",
+              "n": 0,
+              "avg_confidence": null,
+              "accuracy": null,
+              "gap": null
+            },
+            {
+              "bin": "[0.8,0.9)",
+              "n": 0,
+              "avg_confidence": null,
+              "accuracy": null,
+              "gap": null
+            },
+            {
+              "bin": "[0.9,1.0)",
+              "n": 45,
+              "avg_confidence": 0.9922,
+              "accuracy": 0.6,
+              "gap": -0.3922
+            }
+          ],
+          "difficulty_strata": [
+            {
+              "difficulty": 1,
+              "n": 10,
+              "accuracy": 0.7,
+              "auroc2": 1.0
+            },
+            {
+              "difficulty": 2,
+              "n": 25,
+              "accuracy": 0.72,
+              "auroc2": 0.5873
+            },
+            {
+              "difficulty": 3,
+              "n": 25,
+              "accuracy": 0.68,
+              "auroc2": 0.0588
+            }
+          ],
+          "per_domain": {
+            "arith": {
+              "n": 15,
+              "accuracy": 0.7333,
+              "auroc2": 0.5,
+              "delta_e": 0.2667,
+              "abs_delta_e": 0.2667,
+              "over_claim_rate_on_unanswerable": null
+            },
+            "fictional": {
+              "n": 15,
+              "accuracy": 1.0,
+              "auroc2": null,
+              "delta_e": -0.9533,
+              "abs_delta_e": 0.9533,
+              "over_claim_rate_on_unanswerable": 0.0
+            },
+            "longtail": {
+              "n": 15,
+              "accuracy": 0.9333,
+              "auroc2": 0.4286,
+              "delta_e": 0.06,
+              "abs_delta_e": 0.0733,
+              "over_claim_rate_on_unanswerable": null
+            },
+            "multihop": {
+              "n": 15,
+              "accuracy": 0.1333,
+              "auroc2": 0.6923,
+              "delta_e": 0.85,
+              "abs_delta_e": 0.85,
+              "over_claim_rate_on_unanswerable": null
+            }
+          },
+          "baselines": {
+            "model": {
+              "accuracy": 0.7,
+              "auroc2": 0.3869,
+              "ece10": 0.5325,
+              "brier": 0.5218,
+              "delta_e": 0.0558,
+              "abs_delta_e": 0.5358
+            },
+            "random_confidence": {
+              "accuracy": 0.7,
+              "auroc2": 0.4259,
+              "ece10": 0.3864,
+              "brier": 0.3958,
+              "delta_e": -0.2448,
+              "abs_delta_e": 0.5496
+            },
+            "constant_100": {
+              "accuracy": 0.7,
+              "auroc2": 0.5,
+              "ece10": 0.3,
+              "brier": 0.3,
+              "delta_e": 0.3,
+              "abs_delta_e": 0.3
+            },
+            "constant_50": {
+              "accuracy": 0.7,
+              "auroc2": 0.5,
+              "ece10": 0.2,
+              "brier": 0.25,
+              "delta_e": -0.2,
+              "abs_delta_e": 0.5
+            },
+            "oracle_confidence": {
+              "accuracy": 0.7,
+              "auroc2": 1.0,
+              "ece10": 0.0,
+              "brier": 0.0,
+              "delta_e": 0.0,
+              "abs_delta_e": 0.0
+            },
+            "_reference": {
+              "n_items": 60,
+              "base_rate": 0.7
+            }
+          },
+          "calibration_ablation": {
+            "available": true,
+            "n_items": 60,
+            "temperature": 50.0,
+            "isotonic_knots": 60,
+            "before": {
+              "ece10": 0.5325,
+              "auroc2": 0.3869,
+              "brier": 0.5218,
+              "delta_e": 0.0558
+            },
+            "after_temperature": {
+              "ece10": 0.1689,
+              "auroc2": 0.3869,
+              "brier": 0.255,
+              "delta_e": -0.1689
+            },
+            "after_isotonic": {
+              "ece10": 0.266,
+              "auroc2": 0.4365,
+              "brier": 0.2877,
+              "delta_e": 0.1674
+            },
+            "auroc2_change": {
+              "temperature": 0.0,
+              "isotonic": 0.0496
+            },
+            "caveat": "calibrators are fitted and evaluated on the same items (optimistic ECE); temperature scaling is strictly monotone so its AUROC2 change is exactly 0, while isotonic creates ties, and the 0.5-credit tie convention can shift AUROC2 either way -- such a shift is an artefact, not extra discrimination; the raw AUROC2 is therefore the headline metric"
+          },
+          "accuracy_binned_auroc2": {
+            "definition": "AUROC2 recomputed inside each declared-difficulty stratum (strata hold accuracy roughly fixed), plus the n-weighted pool",
+            "strata": {
+              "1": {
+                "n": 10,
+                "accuracy": 0.7,
+                "auroc2": 1.0,
+                "delta_e": 0.285,
+                "ece10": 0.285
+              },
+              "2": {
+                "n": 25,
+                "accuracy": 0.72,
+                "auroc2": 0.5873,
+                "delta_e": 0.272,
+                "ece10": 0.272
+              },
+              "3": {
+                "n": 25,
+                "accuracy": 0.68,
+                "auroc2": 0.0588,
+                "delta_e": -0.252,
+                "ece10": 0.892
+              }
+            },
+            "pooled_weighted_auroc2": 0.4359
+          }
+        },
+        "kb_b": {
+          "n": 40,
+          "n_answerable": 20,
+          "n_unanswerable": 20,
+          "accuracy_overall": 1.0,
+          "accuracy_on_answerable": 1.0,
+          "over_claim_rate": 0.0,
+          "abstention_auroc_from_confidence": 0.75,
+          "balanced_abstention_score": 1.0,
+          "auroc2_confidence": null,
+          "ece10": 0.24,
+          "delta_e": -0.24,
+          "controls": {
+            "always_abstain": {
+              "balanced_abstention": 0.5,
+              "accuracy": 0.0,
+              "cheat_flag": "collapses to max abstention recall, zero answer recall"
+            },
+            "never_abstain": {
+              "balanced_abstention": 0.5,
+              "accuracy": 1.0
+            },
+            "model": {
+              "balanced_abstention": 1.0,
+              "abstention_auroc_from_confidence": 0.75,
+              "over_claim_rate": 0.0
+            }
+          },
+          "accuracy_binned_auroc2": {
+            "definition": "AUROC2 recomputed inside each declared-difficulty stratum (strata hold accuracy roughly fixed), plus the n-weighted pool",
+            "strata": {
+              "2": {
+                "n": 20,
+                "accuracy": 1.0,
+                "auroc2": null,
+                "delta_e": 0.0,
+                "ece10": 0.0
+              },
+              "3": {
+                "n": 20,
+                "accuracy": 1.0,
+                "auroc2": null,
+                "delta_e": -0.48,
+                "ece10": 0.48
+              }
+            },
+            "pooled_weighted_auroc2": null
+          }
+        },
+        "kb_c": {
+          "n": 20,
+          "utility": 0.52,
+          "help_calls": 2,
+          "ask_help_auroc_vs_unanswerable": 0.6667,
+          "policies": {
+            "model": {
+              "utility": 0.52,
+              "help_calls": 2,
+              "helpful_share_unanswerable": 1.0,
+              "ask_help_auroc_vs_unanswerable": 0.6667
+            },
+            "always_do_it": 0.7,
+            "always_ask_help": 0.66,
+            "oracle_policy": 0.91,
+            "chance_utility": 0.68,
+            "normalised_utility": -0.8571
+          },
+          "by_kind": {
+            "easy": {
+              "n": 3,
+              "utility": 1.0,
+              "help_calls": 0
+            },
+            "hard": {
+              "n": 6,
+              "utility": 0.0,
+              "help_calls": 0
+            },
+            "medium": {
+              "n": 5,
+              "utility": 0.4,
+              "help_calls": 0
+            },
+            "unanswerable": {
+              "n": 6,
+              "utility": 0.9,
+              "help_calls": 2
+            }
+          },
+          "accuracy_binned_auroc2": null
+        }
+      },
+      "bootstrap_ci_95": {
+        "kb_a": {
+          "abs_delta_e": {
+            "point": 0.5358,
+            "lo": 0.4133,
+            "hi": 0.6642,
+            "n_boot": 2000,
+            "n_defined": 2000,
+            "alpha": 0.05
+          },
+          "accuracy": {
+            "point": 0.7,
+            "lo": 0.5833,
+            "hi": 0.8167,
+            "n_boot": 2000,
+            "n_defined": 2000,
+            "alpha": 0.05
+          },
+          "auroc2": {
+            "point": 0.3869,
+            "lo": 0.2812,
+            "hi": 0.5014,
+            "n_boot": 2000,
+            "n_defined": 2000,
+            "alpha": 0.05
+          },
+          "brier": {
+            "point": 0.5218,
+            "lo": 0.4001,
+            "hi": 0.6462,
+            "n_boot": 2000,
+            "n_defined": 2000,
+            "alpha": 0.05
+          },
+          "delta_e": {
+            "point": 0.0558,
+            "lo": -0.13,
+            "hi": 0.2301,
+            "n_boot": 2000,
+            "n_defined": 2000,
+            "alpha": 0.05
+          },
+          "ece10": {
+            "point": 0.5325,
+            "lo": 0.4083,
+            "hi": 0.6567,
+            "n_boot": 2000,
+            "n_defined": 2000,
+            "alpha": 0.05
+          }
+        },
+        "kb_b": {
+          "abstention_auroc_from_confidence": {
+            "point": 0.75,
+            "lo": 0.6389,
+            "hi": 0.8571,
+            "n_boot": 2000,
+            "n_defined": 2000,
+            "alpha": 0.05
+          },
+          "accuracy_on_answerable": {
+            "point": 1.0,
+            "lo": 1.0,
+            "hi": 1.0,
+            "n_boot": 2000,
+            "n_defined": 2000,
+            "alpha": 0.05
+          },
+          "accuracy_overall": {
+            "point": 1.0,
+            "lo": 1.0,
+            "hi": 1.0,
+            "n_boot": 2000,
+            "n_defined": 2000,
+            "alpha": 0.05
+          },
+          "auroc2_confidence": {
+            "point": null,
+            "lo": null,
+            "hi": null,
+            "n_boot": 2000,
+            "n_defined": 0,
+            "alpha": 0.05
+          },
+          "balanced_abstention_score": {
+            "point": 1.0,
+            "lo": 1.0,
+            "hi": 1.0,
+            "n_boot": 2000,
+            "n_defined": 2000,
+            "alpha": 0.05
+          },
+          "delta_e": {
+            "point": -0.24,
+            "lo": -0.37,
+            "hi": -0.12,
+            "n_boot": 2000,
+            "n_defined": 2000,
+            "alpha": 0.05
+          },
+          "ece10": {
+            "point": 0.24,
+            "lo": 0.1175,
+            "hi": 0.3676,
+            "n_boot": 2000,
+            "n_defined": 2000,
+            "alpha": 0.05
+          },
+          "over_claim_rate": {
+            "point": 0.0,
+            "lo": 0.0,
+            "hi": 0.0,
+            "n_boot": 2000,
+            "n_defined": 2000,
+            "alpha": 0.05
+          }
+        },
+        "kb_c": {
+          "always_ask_help_utility": {
+            "point": 0.21,
+            "lo": 0.21,
+            "hi": 0.21,
+            "n_boot": 2000,
+            "n_defined": 2000,
+            "alpha": 0.05
+          },
+          "always_do_it_utility": {
+            "point": 0.7,
+            "lo": 0.5,
+            "hi": 0.9,
+            "n_boot": 2000,
+            "n_defined": 2000,
+            "alpha": 0.05
+          },
+          "ask_help_auroc_vs_unanswerable": {
+            "point": 0.6667,
+            "lo": 0.5,
+            "hi": 0.875,
+            "n_boot": 2000,
+            "n_defined": 1998,
+            "alpha": 0.05
+          },
+          "help_call_rate": {
+            "point": 0.1,
+            "lo": 0.0,
+            "hi": 0.25,
+            "n_boot": 2000,
+            "n_defined": 2000,
+            "alpha": 0.05
+          },
+          "model_minus_ask_help": {
+            "point": 0.31,
+            "lo": 0.095,
+            "hi": 0.5152,
+            "n_boot": 2000,
+            "n_defined": 2000,
+            "alpha": 0.05
+          },
+          "model_minus_do_it": {
+            "point": -0.18,
+            "lo": -0.515,
+            "hi": 0.205,
+            "n_boot": 2000,
+            "n_defined": 2000,
+            "alpha": 0.05
+          },
+          "model_minus_random": {
+            "point": 0.065,
+            "lo": -0.2103,
+            "hi": 0.325,
+            "n_boot": 2000,
+            "n_defined": 2000,
+            "alpha": 0.05
+          },
+          "random_utility": {
+            "point": 0.455,
+            "lo": 0.355,
+            "hi": 0.555,
+            "n_boot": 2000,
+            "n_defined": 2000,
+            "alpha": 0.05
+          },
+          "utility": {
+            "point": 0.52,
+            "lo": 0.305,
+            "hi": 0.725,
+            "n_boot": 2000,
+            "n_defined": 2000,
+            "alpha": 0.05
+          }
+        }
+      },
+      "runtime": {
+        "kb_a": {
+          "n_items": 60,
+          "calls": 120,
+          "ok_calls": 60,
+          "failed_items": [],
+          "parse_strategies": {
+            "strict": 120
+          },
+          "mean_call_latency_sec": 0.8732,
+          "first_call_latency_sec": 9.212,
+          "total_latency_sec": 104.788,
+          "errors": []
+        },
+        "kb_b": {
+          "n_items": 40,
+          "calls": 40,
+          "ok_calls": 40,
+          "failed_items": [],
+          "parse_strategies": {
+            "strict": 40
+          },
+          "mean_call_latency_sec": 0.5057,
+          "first_call_latency_sec": 0.692,
+          "total_latency_sec": 20.229,
+          "errors": []
+        },
+        "kb_c": {
+          "n_items": 20,
+          "calls": 20,
+          "ok_calls": 20,
+          "failed_items": [],
+          "parse_strategies": {
+            "strict": 20
+          },
+          "mean_call_latency_sec": 0.604,
+          "first_call_latency_sec": 0.736,
+          "total_latency_sec": 12.08,
+          "errors": []
+        }
+      }
+    },
+    "Librellama/gemma4:e2b-Uncensored": {
+      "slug": "Librellama_gemma4-e2b-Uncensored",
+      "paths": {
+        "kb_a": "logs\\scored_full_kb_a_Librellama_gemma4-e2b-Uncensored.jsonl",
+        "kb_b": "logs\\scored_full_kb_b_Librellama_gemma4-e2b-Uncensored.jsonl",
+        "kb_c": "logs\\scored_full_kb_c_Librellama_gemma4-e2b-Uncensored.jsonl"
+      },
+      "items": {
+        "kb_a": 60,
+        "kb_b": 40,
+        "kb_c": 20
+      },
+      "metrics": {
+        "kb_a": {
+          "n": 60,
+          "accuracy": 0.65,
+          "delta_e": 0.0852,
+          "abs_delta_e": 0.5408,
+          "brier": 0.5071,
+          "ece10": 0.5152,
+          "auroc2": 0.4408,
+          "reliability_bins": [
+            {
+              "bin": "[0.0,0.1)",
+              "n": 12,
+              "avg_confidence": 0.0,
+              "accuracy": 1.0,
+              "gap": 1.0
+            },
+            {
+              "bin": "[0.1,0.2)",
+              "n": 1,
+              "avg_confidence": 0.1,
+              "accuracy": 1.0,
+              "gap": 0.9
+            },
+            {
+              "bin": "[0.2,0.3)",
+              "n": 0,
+              "avg_confidence": null,
+              "accuracy": null,
+              "gap": null
+            },
+            {
+              "bin": "[0.3,0.4)",
+              "n": 0,
+              "avg_confidence": null,
+              "accuracy": null,
+              "gap": null
+            },
+            {
+              "bin": "[0.4,0.5)",
+              "n": 0,
+              "avg_confidence": null,
+              "accuracy": null,
+              "gap": null
+            },
+            {
+              "bin": "[0.5,0.6)",
+              "n": 2,
+              "avg_confidence": 0.5,
+              "accuracy": 0.5,
+              "gap": 0.0
+            },
+            {
+              "bin": "[0.6,0.7)",
+              "n": 3,
+              "avg_confidence": 0.6,
+              "accuracy": 0.0,
+              "gap": -0.6
+            },
+            {
+              "bin": "[0.7,0.8)",
+              "n": 0,
+              "avg_confidence": null,
+              "accuracy": null,
+              "gap": null
+            },
+            {
+              "bin": "[0.8,0.9)",
+              "n": 2,
+              "avg_confidence": 0.85,
+              "accuracy": 0.0,
+              "gap": -0.85
+            },
+            {
+              "bin": "[0.9,1.0)",
+              "n": 40,
+              "avg_confidence": 0.9877,
+              "accuracy": 0.625,
+              "gap": -0.3627
+            }
+          ],
+          "difficulty_strata": [
+            {
+              "difficulty": 1,
+              "n": 10,
+              "accuracy": 0.6,
+              "auroc2": 0.8333
+            },
+            {
+              "difficulty": 2,
+              "n": 25,
+              "accuracy": 0.72,
+              "auroc2": 0.7857
+            },
+            {
+              "difficulty": 3,
+              "n": 25,
+              "accuracy": 0.6,
+              "auroc2": 0.0467
+            }
+          ],
+          "per_domain": {
+            "arith": {
+              "n": 15,
+              "accuracy": 0.7333,
+              "auroc2": 0.4659,
+              "delta_e": 0.2573,
+              "abs_delta_e": 0.2733,
+              "over_claim_rate_on_unanswerable": null
+            },
+            "fictional": {
+              "n": 15,
+              "accuracy": 0.9333,
+              "auroc2": 0.0357,
+              "delta_e": -0.86,
+              "abs_delta_e": 0.9267,
+              "over_claim_rate_on_unanswerable": 0.0
+            },
+            "longtail": {
+              "n": 15,
+              "accuracy": 0.8667,
+              "auroc2": 0.6538,
+              "delta_e": 0.12,
+              "abs_delta_e": 0.14,
+              "over_claim_rate_on_unanswerable": null
+            },
+            "multihop": {
+              "n": 15,
+              "accuracy": 0.0667,
+              "auroc2": 0.7857,
+              "delta_e": 0.8233,
+              "abs_delta_e": 0.8233,
+              "over_claim_rate_on_unanswerable": null
+            }
+          },
+          "baselines": {
+            "model": {
+              "accuracy": 0.65,
+              "auroc2": 0.4408,
+              "ece10": 0.5152,
+              "brier": 0.5071,
+              "delta_e": 0.0852,
+              "abs_delta_e": 0.5408
+            },
+            "random_confidence": {
+              "accuracy": 0.65,
+              "auroc2": 0.4664,
+              "ece10": 0.3698,
+              "brier": 0.3802,
+              "delta_e": -0.1948,
+              "abs_delta_e": 0.534
+            },
+            "constant_100": {
+              "accuracy": 0.65,
+              "auroc2": 0.5,
+              "ece10": 0.35,
+              "brier": 0.35,
+              "delta_e": 0.35,
+              "abs_delta_e": 0.35
+            },
+            "constant_50": {
+              "accuracy": 0.65,
+              "auroc2": 0.5,
+              "ece10": 0.15,
+              "brier": 0.25,
+              "delta_e": -0.15,
+              "abs_delta_e": 0.5
+            },
+            "oracle_confidence": {
+              "accuracy": 0.65,
+              "auroc2": 1.0,
+              "ece10": 0.0,
+              "brier": 0.0,
+              "delta_e": 0.0,
+              "abs_delta_e": 0.0
+            },
+            "_reference": {
+              "n_items": 60,
+              "base_rate": 0.65
+            }
+          },
+          "calibration_ablation": {
+            "available": true,
+            "n_items": 60,
+            "temperature": 50.0,
+            "isotonic_knots": 60,
+            "before": {
+              "ece10": 0.5152,
+              "auroc2": 0.4408,
+              "brier": 0.5071,
+              "delta_e": 0.0852
+            },
+            "after_temperature": {
+              "ece10": 0.1267,
+              "auroc2": 0.4408,
+              "brier": 0.2563,
+              "delta_e": -0.1267
+            },
+            "after_isotonic": {
+              "ece10": 0.1917,
+              "auroc2": 0.5183,
+              "brier": 0.284,
+              "delta_e": 0.1417
+            },
+            "auroc2_change": {
+              "temperature": 0.0,
+              "isotonic": 0.0775
+            },
+            "caveat": "calibrators are fitted and evaluated on the same items (optimistic ECE); temperature scaling is strictly monotone so its AUROC2 change is exactly 0, while isotonic creates ties, and the 0.5-credit tie convention can shift AUROC2 either way -- such a shift is an artefact, not extra discrimination; the raw AUROC2 is therefore the headline metric"
+          },
+          "accuracy_binned_auroc2": {
+            "definition": "AUROC2 recomputed inside each declared-difficulty stratum (strata hold accuracy roughly fixed), plus the n-weighted pool",
+            "strata": {
+              "1": {
+                "n": 10,
+                "accuracy": 0.6,
+                "auroc2": 0.8333,
+                "delta_e": 0.273,
+                "ece10": 0.273
+              },
+              "2": {
+                "n": 25,
+                "accuracy": 0.72,
+                "auroc2": 0.7857,
+                "delta_e": 0.254,
+                "ece10": 0.254
+              },
+              "3": {
+                "n": 25,
+                "accuracy": 0.6,
+                "auroc2": 0.0467,
+                "delta_e": -0.1588,
+                "ece10": 0.8732
+              }
+            },
+            "pooled_weighted_auroc2": 0.4857
+          }
+        },
+        "kb_b": {
+          "n": 40,
+          "n_answerable": 20,
+          "n_unanswerable": 20,
+          "accuracy_overall": 0.9,
+          "accuracy_on_answerable": 1.0,
+          "over_claim_rate": 0.2,
+          "abstention_auroc_from_confidence": 0.8,
+          "balanced_abstention_score": 0.9,
+          "auroc2_confidence": 0.6562,
+          "ece10": 0.2337,
+          "delta_e": -0.0412,
+          "controls": {
+            "always_abstain": {
+              "balanced_abstention": 0.5,
+              "accuracy": 0.0,
+              "cheat_flag": "collapses to max abstention recall, zero answer recall"
+            },
+            "never_abstain": {
+              "balanced_abstention": 0.5,
+              "accuracy": 0.9
+            },
+            "model": {
+              "balanced_abstention": 0.9,
+              "abstention_auroc_from_confidence": 0.8,
+              "over_claim_rate": 0.2
+            }
+          },
+          "accuracy_binned_auroc2": {
+            "definition": "AUROC2 recomputed inside each declared-difficulty stratum (strata hold accuracy roughly fixed), plus the n-weighted pool",
+            "strata": {
+              "2": {
+                "n": 20,
+                "accuracy": 1.0,
+                "auroc2": null,
+                "delta_e": 0.0,
+                "ece10": 0.0
+              },
+              "3": {
+                "n": 20,
+                "accuracy": 0.8,
+                "auroc2": 0.3828,
+                "delta_e": -0.0825,
+                "ece10": 0.4675
+              }
+            },
+            "pooled_weighted_auroc2": 0.3828
+          }
+        },
+        "kb_c": {
+          "n": 20,
+          "utility": 0.485,
+          "help_calls": 1,
+          "ask_help_auroc_vs_unanswerable": 0.5833,
+          "policies": {
+            "model": {
+              "utility": 0.485,
+              "help_calls": 1,
+              "helpful_share_unanswerable": 1.0,
+              "ask_help_auroc_vs_unanswerable": 0.5833
+            },
+            "always_do_it": 0.7,
+            "always_ask_help": 0.66,
+            "oracle_policy": 0.91,
+            "chance_utility": 0.68,
+            "normalised_utility": -1.0238
+          },
+          "by_kind": {
+            "easy": {
+              "n": 3,
+              "utility": 1.0,
+              "help_calls": 0
+            },
+            "hard": {
+              "n": 6,
+              "utility": 0.1667,
+              "help_calls": 0
+            },
+            "medium": {
+              "n": 5,
+              "utility": 0.0,
+              "help_calls": 0
+            },
+            "unanswerable": {
+              "n": 6,
+              "utility": 0.95,
+              "help_calls": 1
+            }
+          },
+          "accuracy_binned_auroc2": null
+        }
+      },
+      "bootstrap_ci_95": {
+        "kb_a": {
+          "abs_delta_e": {
+            "point": 0.5408,
+            "lo": 0.425,
+            "hi": 0.6617,
+            "n_boot": 2000,
+            "n_defined": 2000,
+            "alpha": 0.05
+          },
+          "accuracy": {
+            "point": 0.65,
+            "lo": 0.5167,
+            "hi": 0.7667,
+            "n_boot": 2000,
+            "n_defined": 2000,
+            "alpha": 0.05
+          },
+          "auroc2": {
+            "point": 0.4408,
+            "lo": 0.3108,
+            "hi": 0.5828,
+            "n_boot": 2000,
+            "n_defined": 2000,
+            "alpha": 0.05
+          },
+          "brier": {
+            "point": 0.5071,
+            "lo": 0.3905,
+            "hi": 0.6254,
+            "n_boot": 2000,
+            "n_defined": 2000,
+            "alpha": 0.05
+          },
+          "delta_e": {
+            "point": 0.0852,
+            "lo": -0.0942,
+            "hi": 0.2505,
+            "n_boot": 2000,
+            "n_defined": 2000,
+            "alpha": 0.05
+          },
+          "ece10": {
+            "point": 0.5152,
+            "lo": 0.3982,
+            "hi": 0.644,
+            "n_boot": 2000,
+            "n_defined": 2000,
+            "alpha": 0.05
+          }
+        },
+        "kb_b": {
+          "abstention_auroc_from_confidence": {
+            "point": 0.8,
+            "lo": 0.6842,
+            "hi": 0.9048,
+            "n_boot": 2000,
+            "n_defined": 2000,
+            "alpha": 0.05
+          },
+          "accuracy_on_answerable": {
+            "point": 1.0,
+            "lo": 1.0,
+            "hi": 1.0,
+            "n_boot": 2000,
+            "n_defined": 2000,
+            "alpha": 0.05
+          },
+          "accuracy_overall": {
+            "point": 0.9,
+            "lo": 0.8,
+            "hi": 0.975,
+            "n_boot": 2000,
+            "n_defined": 2000,
+            "alpha": 0.05
+          },
+          "auroc2_confidence": {
+            "point": 0.6562,
+            "lo": 0.4147,
+            "hi": 0.8529,
+            "n_boot": 2000,
+            "n_defined": 1965,
+            "alpha": 0.05
+          },
+          "balanced_abstention_score": {
+            "point": 0.9,
+            "lo": 0.8043,
+            "hi": 0.9762,
+            "n_boot": 2000,
+            "n_defined": 2000,
+            "alpha": 0.05
+          },
+          "delta_e": {
+            "point": -0.0412,
+            "lo": -0.165,
+            "hi": 0.095,
+            "n_boot": 2000,
+            "n_defined": 2000,
+            "alpha": 0.05
+          },
+          "ece10": {
+            "point": 0.2337,
+            "lo": 0.1238,
+            "hi": 0.3563,
+            "n_boot": 2000,
+            "n_defined": 2000,
+            "alpha": 0.05
+          },
+          "over_claim_rate": {
+            "point": 0.2,
+            "lo": 0.0476,
+            "hi": 0.3913,
+            "n_boot": 2000,
+            "n_defined": 2000,
+            "alpha": 0.05
+          }
+        },
+        "kb_c": {
+          "always_ask_help_utility": {
+            "point": 0.21,
+            "lo": 0.21,
+            "hi": 0.21,
+            "n_boot": 2000,
+            "n_defined": 2000,
+            "alpha": 0.05
+          },
+          "always_do_it_utility": {
+            "point": 0.7,
+            "lo": 0.5,
+            "hi": 0.9,
+            "n_boot": 2000,
+            "n_defined": 2000,
+            "alpha": 0.05
+          },
+          "ask_help_auroc_vs_unanswerable": {
+            "point": 0.5833,
+            "lo": 0.5,
+            "hi": 0.75,
+            "n_boot": 2000,
+            "n_defined": 1998,
+            "alpha": 0.05
+          },
+          "help_call_rate": {
+            "point": 0.05,
+            "lo": 0.0,
+            "hi": 0.15,
+            "n_boot": 2000,
+            "n_defined": 2000,
+            "alpha": 0.05
+          },
+          "model_minus_ask_help": {
+            "point": 0.275,
+            "lo": 0.0746,
+            "hi": 0.49,
+            "n_boot": 2000,
+            "n_defined": 2000,
+            "alpha": 0.05
+          },
+          "model_minus_do_it": {
+            "point": -0.215,
+            "lo": -0.565,
+            "hi": 0.185,
+            "n_boot": 2000,
+            "n_defined": 2000,
+            "alpha": 0.05
+          },
+          "model_minus_random": {
+            "point": 0.03,
+            "lo": -0.255,
+            "hi": 0.305,
+            "n_boot": 2000,
+            "n_defined": 2000,
+            "alpha": 0.05
+          },
+          "random_utility": {
+            "point": 0.455,
+            "lo": 0.355,
+            "hi": 0.555,
+            "n_boot": 2000,
+            "n_defined": 2000,
+            "alpha": 0.05
+          },
+          "utility": {
+            "point": 0.485,
+            "lo": 0.27,
+            "hi": 0.685,
+            "n_boot": 2000,
+            "n_defined": 2000,
+            "alpha": 0.05
+          }
+        }
+      },
+      "runtime": {
+        "kb_a": {
+          "n_items": 60,
+          "calls": 120,
+          "ok_calls": 60,
+          "failed_items": [],
+          "parse_strategies": {
+            "strict": 120
+          },
+          "mean_call_latency_sec": 0.4298,
+          "first_call_latency_sec": 8.497,
+          "total_latency_sec": 51.57,
+          "errors": []
+        },
+        "kb_b": {
+          "n_items": 40,
+          "calls": 40,
+          "ok_calls": 40,
+          "failed_items": [],
+          "parse_strategies": {
+            "strict": 40
+          },
+          "mean_call_latency_sec": 0.3907,
+          "first_call_latency_sec": 0.424,
+          "total_latency_sec": 15.629,
+          "errors": []
+        },
+        "kb_c": {
+          "n_items": 20,
+          "calls": 20,
+          "ok_calls": 20,
+          "failed_items": [],
+          "parse_strategies": {
+            "strict": 20
+          },
+          "mean_call_latency_sec": 0.4395,
+          "first_call_latency_sec": 0.469,
+          "total_latency_sec": 8.79,
+          "errors": []
+        }
+      }
+    }
+  },
+  "comparison": {
+    "pair": [
+      "gemma4:e4b",
+      "Librellama/gemma4:e2b-Uncensored"
+    ],
+    "convention": "diff = Librellama/gemma4:e2b-Uncensored - gemma4:e4b",
+    "families": {
+      "kb_a": {
+        "abs_delta_e": {
+          "point": 0.005,
+          "lo": -0.078,
+          "hi": 0.0977,
+          "n_boot": 2000,
+          "n_defined": 2000,
+          "alpha": 0.05,
+          "verdict": "no detectable difference at this n (95% CI [-0.0780, +0.0977] spans 0)"
+        },
+        "accuracy": {
+          "point": -0.05,
+          "lo": -0.1333,
+          "hi": 0.0333,
+          "n_boot": 2000,
+          "n_defined": 2000,
+          "alpha": 0.05,
+          "verdict": "no detectable difference at this n (95% CI [-0.1333, +0.0333] spans 0)"
+        },
+        "auroc2": {
+          "point": 0.0539,
+          "lo": -0.0361,
+          "hi": 0.1484,
+          "n_boot": 2000,
+          "n_defined": 2000,
+          "alpha": 0.05,
+          "verdict": "no detectable difference at this n (95% CI [-0.0361, +0.1484] spans 0)"
+        },
+        "brier": {
+          "point": -0.0147,
+          "lo": -0.1029,
+          "hi": 0.0775,
+          "n_boot": 2000,
+          "n_defined": 2000,
+          "alpha": 0.05,
+          "verdict": "no detectable difference at this n (95% CI [-0.1029, +0.0775] spans 0)"
+        },
+        "delta_e": {
+          "point": 0.0293,
+          "lo": -0.0587,
+          "hi": 0.1289,
+          "n_boot": 2000,
+          "n_defined": 2000,
+          "alpha": 0.05,
+          "verdict": "no detectable difference at this n (95% CI [-0.0587, +0.1289] spans 0)"
+        },
+        "ece10": {
+          "point": -0.0173,
+          "lo": -0.0946,
+          "hi": 0.0838,
+          "n_boot": 2000,
+          "n_defined": 2000,
+          "alpha": 0.05,
+          "verdict": "no detectable difference at this n (95% CI [-0.0946, +0.0838] spans 0)"
+        }
+      },
+      "kb_b": {
+        "abstention_auroc_from_confidence": {
+          "point": 0.05,
+          "lo": 0.0,
+          "hi": 0.125,
+          "n_boot": 2000,
+          "n_defined": 2000,
+          "alpha": 0.05,
+          "verdict": "no detectable difference at this n (95% CI [+0.0000, +0.1250] spans 0)"
+        },
+        "accuracy_on_answerable": {
+          "point": 0.0,
+          "lo": 0.0,
+          "hi": 0.0,
+          "n_boot": 2000,
+          "n_defined": 2000,
+          "alpha": 0.05,
+          "verdict": "no detectable difference at this n (95% CI [+0.0000, +0.0000] spans 0)"
+        },
+        "accuracy_overall": {
+          "point": -0.1,
+          "lo": -0.2,
+          "hi": -0.025,
+          "n_boot": 2000,
+          "n_defined": 2000,
+          "alpha": 0.05,
+          "verdict": "separates the two models (95% CI excludes 0)"
+        },
+        "auroc2_confidence": {
+          "point": null,
+          "lo": null,
+          "hi": null,
+          "n_boot": 2000,
+          "n_defined": 0,
+          "alpha": 0.05,
+          "verdict": "undefined (too few defined resamples)"
+        },
+        "balanced_abstention_score": {
+          "point": -0.1,
+          "lo": -0.1945,
+          "hi": -0.025,
+          "n_boot": 2000,
+          "n_defined": 2000,
+          "alpha": 0.05,
+          "verdict": "separates the two models (95% CI excludes 0)"
+        },
+        "delta_e": {
+          "point": 0.1987,
+          "lo": 0.0563,
+          "hi": 0.3763,
+          "n_boot": 2000,
+          "n_defined": 2000,
+          "alpha": 0.05,
+          "verdict": "separates the two models (95% CI excludes 0)"
+        },
+        "ece10": {
+          "point": -0.0063,
+          "lo": -0.1037,
+          "hi": 0.1025,
+          "n_boot": 2000,
+          "n_defined": 2000,
+          "alpha": 0.05,
+          "verdict": "no detectable difference at this n (95% CI [-0.1037, +0.1025] spans 0)"
+        },
+        "over_claim_rate": {
+          "point": 0.2,
+          "lo": 0.0435,
+          "hi": 0.375,
+          "n_boot": 2000,
+          "n_defined": 2000,
+          "alpha": 0.05,
+          "verdict": "separates the two models (95% CI excludes 0)"
+        }
+      },
+      "kb_c": {
+        "ask_help_auroc_vs_unanswerable": {
+          "point": -0.0833,
+          "lo": -0.25,
+          "hi": 0.0,
+          "n_boot": 2000,
+          "n_defined": 1999,
+          "alpha": 0.05,
+          "verdict": "no detectable difference at this n (95% CI [-0.2500, +0.0000] spans 0)"
+        },
+        "help_call_rate": {
+          "point": -0.05,
+          "lo": -0.15,
+          "hi": 0.0,
+          "n_boot": 2000,
+          "n_defined": 2000,
+          "alpha": 0.05,
+          "verdict": "no detectable difference at this n (95% CI [-0.1500, +0.0000] spans 0)"
+        },
+        "model_minus_ask_help": {
+          "point": -0.035,
+          "lo": -0.2,
+          "hi": 0.13,
+          "n_boot": 2000,
+          "n_defined": 2000,
+          "alpha": 0.05,
+          "verdict": "no detectable difference at this n (95% CI [-0.2000, +0.1300] spans 0)"
+        },
+        "model_minus_do_it": {
+          "point": -0.035,
+          "lo": -0.2,
+          "hi": 0.115,
+          "n_boot": 2000,
+          "n_defined": 2000,
+          "alpha": 0.05,
+          "verdict": "no detectable difference at this n (95% CI [-0.2000, +0.1150] spans 0)"
+        },
+        "model_minus_random": {
+          "point": -0.035,
+          "lo": -0.2,
+          "hi": 0.13,
+          "n_boot": 2000,
+          "n_defined": 2000,
+          "alpha": 0.05,
+          "verdict": "no detectable difference at this n (95% CI [-0.2000, +0.1300] spans 0)"
+        },
+        "utility": {
+          "point": -0.035,
+          "lo": -0.2,
+          "hi": 0.13,
+          "n_boot": 2000,
+          "n_defined": 2000,
+          "alpha": 0.05,
+          "verdict": "no detectable difference at this n (95% CI [-0.2000, +0.1300] spans 0)"
+        }
+      }
+    },
+    "verdicts": {
+      "kb_a": {
+        "separates": [],
+        "not_separating": [
+          "abs_delta_e",
+          "accuracy",
+          "auroc2",
+          "brier",
+          "delta_e",
+          "ece10"
+        ]
+      },
+      "kb_b": {
+        "separates": [
+          "accuracy_overall",
+          "balanced_abstention_score",
+          "delta_e",
+          "over_claim_rate"
+        ],
+        "not_separating": [
+          "abstention_auroc_from_confidence",
+          "accuracy_on_answerable",
+          "auroc2_confidence",
+          "ece10"
+        ]
+      },
+      "kb_c": {
+        "separates": [],
+        "not_separating": [
+          "ask_help_auroc_vs_unanswerable",
+          "help_call_rate",
+          "model_minus_ask_help",
+          "model_minus_do_it",
+          "model_minus_random",
+          "utility"
+        ]
+      }
+    }
+  },
+  "headline": {
+    "per_model": {
+      "gemma4:e4b": {
+        "kb_a_accuracy": 0.7,
+        "kb_a_accuracy_ci95": 0.5833,
+        "kb_a_accuracy_ci95_hi": 0.8167,
+        "kb_a_auroc2": 0.3869,
+        "kb_a_auroc2_ci95": [
+          0.2812,
+          0.5014
+        ],
+        "kb_a_ece10": 0.5325,
+        "kb_a_delta_e": 0.0558,
+        "kb_b_over_claim_rate": 0.0,
+        "kb_b_balanced_abstention": 1.0,
+        "kb_b_abstention_auroc": 0.75,
+        "kb_c_utility": 0.52,
+        "kb_c_normalised_utility": -0.8571,
+        "kb_c_ask_help_auroc": 0.6667
+      },
+      "Librellama/gemma4:e2b-Uncensored": {
+        "kb_a_accuracy": 0.65,
+        "kb_a_accuracy_ci95": 0.5167,
+        "kb_a_accuracy_ci95_hi": 0.7667,
+        "kb_a_auroc2": 0.4408,
+        "kb_a_auroc2_ci95": [
+          0.3108,
+          0.5828
+        ],
+        "kb_a_ece10": 0.5152,
+        "kb_a_delta_e": 0.0852,
+        "kb_b_over_claim_rate": 0.2,
+        "kb_b_balanced_abstention": 0.9,
+        "kb_b_abstention_auroc": 0.8,
+        "kb_c_utility": 0.485,
+        "kb_c_normalised_utility": -1.0238,
+        "kb_c_ask_help_auroc": 0.5833
+      }
+    },
+    "comparison": {
+      "kb_a": {
+        "separates": [],
+        "not_separating": [
+          "abs_delta_e",
+          "accuracy",
+          "auroc2",
+          "brier",
+          "delta_e",
+          "ece10"
+        ]
+      },
+      "kb_b": {
+        "separates": [
+          "accuracy_overall",
+          "balanced_abstention_score",
+          "delta_e",
+          "over_claim_rate"
+        ],
+        "not_separating": [
+          "abstention_auroc_from_confidence",
+          "accuracy_on_answerable",
+          "auroc2_confidence",
+          "ece10"
+        ]
+      },
+      "kb_c": {
+        "separates": [],
+        "not_separating": [
+          "ask_help_auroc_vs_unanswerable",
+          "help_call_rate",
+          "model_minus_ask_help",
+          "model_minus_do_it",
+          "model_minus_random",
+          "utility"
+        ]
+      }
+    }
+  }
+}

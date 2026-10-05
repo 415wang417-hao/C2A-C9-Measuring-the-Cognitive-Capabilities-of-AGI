@@ -1,0 +1,14 @@
+# KnowBound -- dependencies
+#
+# The benchmark is intentionally dependency-light: only the standard library is
+# strictly required (the model client falls back to urllib and the config loader
+# falls back to a mini YAML parser).
+#
+#   requests : preferred HTTP client for the Ollama endpoint (urllib fallback)
+#   numpy    : used by knowbound/calibrators.py (see note below)
+#
+# NOTE: knowbound/calibrators.py imports numpy. If numpy is unavailable the
+# rest of the pipeline still runs; only the calibration ablation is skipped
+# (knowbound.baselines.calibration_ablation reports {"available": false}).
+requests>=2.28
+numpy>=1.24
