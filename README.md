@@ -1,2 +1,31 @@
-# C2A-C9-Measuring-the-Cognitive-Capabilities-of-AGI
-C2A / C9 — Measuring the Cognitive Capabilities of AGI | 衡量 AGI 的认知能力 (EduSeed ch-20260717031352-tlg70p)
+# C2A / C9 — Measuring the Cognitive Capabilities of AGI
+
+> 衡量 AGI 的认知能力 · EduSeed 挑战交付仓库
+
+| 项 | 值 |
+| --- | --- |
+| 平台挑战编号 | `ch-20260717031352-tlg70p` |
+| 挑战标题 | C2A / C9：衡量 AGI 的认知能力 |
+| 性质 | Elite 20 录取评审的重要组成部分 |
+| 截止时间 | 2026-12-31 23:59 |
+| 平台要求交付物 | `*proposal*`、`*benchmark*`、`*AI日志*`、`*AAR*` |
+
+## 挑战目标
+
+- 设计指标清晰、基线合理的基准方案
+- 论证基准的科学性（信度 / 效度 / 防作弊）
+- 产出可执行的竞赛提案文档
+- 理解评测设计的常见陷阱
+
+## 交付物索引
+
+| 交付物 | 说明 | 状态 |
+| --- | --- | --- |
+| proposal | 竞赛 / 基准提案文档 | 待补充 |
+| benchmark | 基准实现、数据集与评测结果 | 待补充 |
+| AI日志 | AI 协作过程日志 | 待补充 |
+| AAR | 事后复盘 | 待补充 |
+
+## 说明
+
+本仓库用于提交与归档上述 EduSeed 挑战的交付物，详细内容随交付推进更新。
