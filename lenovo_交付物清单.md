@@ -26,7 +26,7 @@ AIGC:
 
 | 序号 | 文件/目录名 | 类型 | 所属挑战 | 是否必需 | 路径 | 一句话说明 | 状态 |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | `lenovo_C2A_提案.md` | Markdown 提案 | C2A | **是**（核心件） | `C:\Users\lenovo\Desktop\lenovo_C2A-C9_交付物\lenovo_C2A_提案.md` | KnowBound 元认知基准提案定稿：四段式（问题定义 20% / 方法路线 40% / 创新点 20% / 可行性与人类基线 20%）+ 18 条核验文献，24560 字节 | ✅ |
+| 1 | `lenovo_C2A_proposal.md` | Markdown 提案 | C2A | **是**（核心件） | `C:\Users\lenovo\Desktop\lenovo_C2A-C9_交付物\lenovo_C2A_proposal.md` | KnowBound 元认知基准提案定稿：四段式（问题定义 20% / 方法路线 40% / 创新点 20% / 可行性与人类基线 20%）+ 18 条核验文献，24560 字节 | ✅ |
 | 2 | `lenovo_C2A_AI日志.md` | Markdown 日志 | C2A | **是**（红线件） | `C:\Users\lenovo\Desktop\lenovo_C2A-C9_交付物\lenovo_C2A_AI日志.md` | AI 使用记录：任务拆解、10 轮 prompt 迭代时间线、失败纠偏表、人工介入与段位自评，22055 字节 | ✅ |
 | 3 | `lenovo_C2A_拿来说明.md` | Markdown 说明 | C2A | **是**（单列评分） | `C:\Users\lenovo\Desktop\lenovo_C2A-C9_交付物\lenovo_C2A_拿来说明.md` | 拿来主义说明：四类来源（文献 / 已有 benchmark / 框架 / 工具）、逐行回应 Track 2 缺口表、10 条"去掉的"与 5 条"改进的"，22724 字节 | ✅ |
 | 4 | `lenovo_C2A_提案_迭代版本.md` | Markdown 提案（迭代留痕） | C2A | 建议随附 | `C:\Users\lenovo\Desktop\lenovo_C2A-C9_交付物\lenovo_C2A_提案_迭代版本.md` | v1→v2→v3 演进记录 + 完整四段式定稿 + 版本对照表 + 与 C9 实测数据的可复算对齐清单，34083 字节 | 📄 |
@@ -114,7 +114,7 @@ AIGC:
 
 **自我披露的偏差（不影响红线判定，但如实列出）**
 
-1. `lenovo_C2A_提案.md` 与 `lenovo_C2A_提案_迭代版本.md` 的正文长度**超出赛题建议的 800–1500 字**；取舍为"结论全部有据"优先。
+1. `lenovo_C2A_proposal.md` 与 `lenovo_C2A_提案_迭代版本.md` 的正文长度**超出赛题建议的 800–1500 字**；取舍为"结论全部有据"优先。
 2. 人类基线**未采集数据**，交付物中仅含协议 / 空模板 / 打分脚本 / 文献值，不含任何人类指标数字（主动取舍，非遗漏）。
 3. `lenovo_C9_benchmark\.pytest_cache\` 为运行缓存，非交付物内容，可删除。
 4. 本清单的"是否必需"列以 `rubric.json` 与 `评分标准.md` 的必交清单为准，标"建议随附"的三件为本任务额外产出，不影响红线判定。

@@ -42,7 +42,7 @@ C:\Users\lenovo\Desktop\lenovo_C2A-C9_交付物\
 ├─ lenovo_交付物清单.md                   ← 逐件清单 + 两套评分口径映射 + 红线自检
 │
 ├─ 【C2A】提案
-│   ├─ lenovo_C2A_提案.md                 ← 提案定稿（四段式 20/40/20/20 + 18 条核验文献）
+│   ├─ lenovo_C2A_proposal.md                 ← 提案定稿（四段式 20/40/20/20 + 18 条核验文献）
 │   ├─ lenovo_C2A_提案_迭代版本.md         ← v1→v2→v3 演进记录 + 版本对照表 + 可复算对齐清单
 │   ├─ lenovo_C2A_AI日志.md               ← AI 使用记录（10 轮迭代时间线 / 纠偏表 / 人工介入）
 │   └─ lenovo_C2A_拿来说明.md             ← 拿来主义说明（缺口表逐行回应 / 10 条去掉 / 5 条改进）
@@ -215,7 +215,7 @@ python human_baseline\lenovo_human_scoring.py --validate-only
 
 | 规则 | 说明 | 示例 |
 | --- | --- | --- |
-| **统一前缀** | 所有交付文件以 `lenovo_` 开头（本人姓名拼音） | `lenovo_C2A_提案.md` |
+| **统一前缀** | 所有交付文件以 `lenovo_` 开头（本人姓名拼音） | `lenovo_C2A_proposal.md` |
 | **结构** | `lenovo_{C2A\|C9}_{描述}.md`；代码目录为 `lenovo_C9_benchmark\` | `lenovo_C9_测试结果.md` |
 | **语言** | 正文以中文论述，**专业术语保留英文**（AUROC2 / ECE / BAS / over-claim / bootstrap 等） | — |
 | **不改既有文件** | `lenovo_C9_benchmark\` 内既有文件在本任务中**未被修改**，新增文档一律落在根目录 | — |

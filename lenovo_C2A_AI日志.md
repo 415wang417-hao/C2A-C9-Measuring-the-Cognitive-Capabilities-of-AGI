@@ -15,7 +15,7 @@ AIGC:
 > **挑战 / Challenge:** C2A / C9 — 衡量 AGI 的认知能力
 > **赛道 / Track:** Track 2 — Metacognition（元认知）
 > **日期 / Date:** 2026-10-05
-> **对应提案:** `lenovo_C2A_提案.md`（KnowBound — 预测性元认知三族评测）
+> **对应提案:** `lenovo_C2A_proposal.md`（KnowBound — 预测性元认知三族评测）
 
 本日志记录 **C2A 阶段**——从赛题资料包拆解，到 KnowBound 三族构念成型，再到四段式提案与 18 条参考文献全部核验完毕——全过程中 AI 在每一轮被要求做什么、产出了什么、错在哪里、怎么修。
 **不是流水账**：每一轮按"目标 → prompt 要点 → 输出问题 → 修正动作"四段写清。提案中出现的每一个数值，均可回溯到 `lenovo_C9_benchmark\results\metrics.json` 与 `results\summary.md`。
@@ -30,7 +30,7 @@ AI 接手后的第一个动作不是写提案，而是把 `challenge_spec.md` �
 
 | 文件 | 内容要求 | 依据（逐字取自赛题） | 权重映射 | 状态 |
 | --- | --- | --- | --- | --- |
-| `lenovo_C2A_提案.md` | 四部分：赛道动机 / Benchmark 设计 / 人类基线 / 创新与可行性 | challenge_spec「提案内容要求」 | 20% / 40% / 20% / 20% | 已完成（落盘） |
+| `lenovo_C2A_proposal.md` | 四部分：赛道动机 / Benchmark 设计 / 人类基线 / 创新与可行性 | challenge_spec「提案内容要求」 | 20% / 40% / 20% / 20% | 已完成（落盘） |
 | `lenovo_C2A_AI日志.md` | 论文精读、方案构思、写作过程中的 AI 使用记录 | challenge_spec「必须提交的文件」⚡ | 计入"AI-First 原则" | 本文档 |
 | `lenovo_C2A_拿来说明.md` | 参考了哪些已有 benchmark、论文、框架 | challenge_spec「必须提交的文件」 | 直接对应"拿来主义质量 20%" | 已完成（落盘） |
 

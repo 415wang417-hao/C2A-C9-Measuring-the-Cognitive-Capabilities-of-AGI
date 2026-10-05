@@ -15,7 +15,7 @@ AIGC:
 > **挑战 / Challenge:** C2A / C9 — 衡量 AGI 的认知能力
 > **赛道 / Track:** Track 2 — Metacognition（元认知）
 > **日期 / Date:** 2026-10-05
-> **对应提案:** `lenovo_C2A_提案.md`（KnowBound — 预测性元认知三族评测）
+> **对应提案:** `lenovo_C2A_proposal.md`（KnowBound — 预测性元认知三族评测）
 
 KnowBound 不是从零发明的。它的**问题定义**来自赛题资料包的 Track 2 缺口表，**结构**来自 `c2a-starter` 的示例模板，**写作框架**来自 `c2a-proposal-generator` 的 SKILL.md，**方法**来自认知科学与校准研究的一批公开文献。
 本文档逐条说明：**拿了什么、去掉什么、改了什么、为什么改**。所有外部文献均经逐条核验（标题 / 作者 / 年份 / venue / 编号），核验不通过者已删除，最终引用 **18 条，全部通过核验**（核验过程与问题条目详见 `lenovo_C2A_AI日志.md` §4）。
